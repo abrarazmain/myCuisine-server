@@ -14,9 +14,8 @@ app.get("/chefs", (req, res) => {
 });
 app.get("/chefs/:id", (req, res) => {
   const id = req.params.id;
-
-  const single = allChefs.find((s) => s.id == id);
-  res.send(single);
+  const singleChef = allChefs.find((s) => s.id == id);
+  res.send(singleChef);
 });
 
 app.listen(port, () => {
